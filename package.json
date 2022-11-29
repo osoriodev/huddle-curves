@@ -1,0 +1,30 @@
+{
+  "name": "huddle-curves",
+  "version": "1.0.0",
+  "description": "Huddle landing page with curved sections",
+  "main": "index.js",
+  "source": "src/index.html",
+  "targets": {
+    "main": false
+  },
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build --no-source-maps",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osoriodev/huddle-curves.git"
+  },
+  "keywords": ["html", "sass", "parcel"],
+  "author": "David Osorio <osoriodev@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/osoriodev/huddle-curves/issues"
+  },
+  "homepage": "https://github.com/osoriodev/huddle-curves#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.0",
+    "parcel": "^2.8.0"
+  }
+}
