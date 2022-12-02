@@ -1,0 +1,38 @@
+// Open Sans Family
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/src/assets/fonts/open-sans-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/src/assets/fonts/open-sans-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/src/assets/fonts/open-sans-700.woff2') format('woff2');
+}
+
+// Poppins Family
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/src/assets/fonts/poppins-700.woff2') format('woff2');
+}
+
+// Social Media Family
+@font-face {
+  font-family: 'social-media';
+  font-style: normal;
+  font-weight: normal;
+  font-display: block;
+  src: url('/src/assets/fonts/social-media.woff') format('woff');
+}

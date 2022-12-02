@@ -1,0 +1,8 @@
+@use 'variables' as *;
+
+// Mixin to manage responsive breakpoints
+@mixin respond-to($size) {
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
