@@ -1,0 +1,27 @@
+@use '../utils' as *;
+
+.btn {
+  display: inline-block;
+  padding: rem(12) rem(32);
+  border-radius: rem(24);
+  font-size: rem(14);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--clr-ntrl);
+  background-color: var(--clr-primary);
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: var(--clr-primary-lt);
+  }
+
+  @include respond-to('lg') {
+    font-size: rem(16);
+  }
+
+  @include respond-to('xl') {
+    padding: rem(28) rem(104);
+    border-radius: rem(40);
+    font-size: rem(20);
+  }
+}
