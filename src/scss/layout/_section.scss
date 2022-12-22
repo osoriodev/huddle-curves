@@ -1,0 +1,117 @@
+@use '../utils' as *;
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+
+  @include respond-to('lg') {
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  &--one {
+    padding: rem(40) rem(36);
+    background-color: var(--clr-helper);
+
+    @include respond-to('lg') {
+      flex-direction: row-reverse;
+      padding-inline: rem(120);
+    }
+
+    @include respond-to('xl') {
+      padding: rem(68) rem(150) rem(44) rem(130);
+    }
+  }
+
+  &--two {
+    padding: rem(200) rem(36) rem(232);
+    background-image:
+      url('/src/assets/img/bg-section-bottom-mobile-1.svg'),
+      url('/src/assets/img/bg-section-top-mobile-2.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% auto, 100% auto;
+    background-position: top, bottom;
+
+    @include respond-to('md') {
+      background-image:
+        url('/src/assets/img/bg-section-bottom-desktop-1.svg'),
+        url('/src/assets/img/bg-section-top-desktop-2.svg');
+    }
+
+    @include respond-to('lg') {
+      flex-direction: row;
+      padding-inline: rem(120);
+    }
+
+    @include respond-to('xl') {
+      padding: rem(334) rem(118) rem(266) rem(134);
+    }
+  }
+
+  &--three {
+    padding: rem(36);
+    background-color: var(--clr-helper);
+
+    @include respond-to('lg') {
+      flex-direction: row-reverse;
+      padding-inline: rem(120);
+    }
+
+    @include respond-to('xl') {
+      padding: rem(43) rem(133) rem(88) rem(120);
+    }
+  }
+
+  &__pic {
+    width: 100%;
+    max-width: rem(420);
+    margin-bottom: rem(64);
+
+    @include respond-to('lg') {
+      margin: 0;
+    }
+
+    @include respond-to('xl') {
+      max-width: rem(518);
+    }
+
+    &--two {
+      @include respond-to('xl') {
+        max-width: rem(532);
+      }
+    }
+
+    &--three {
+      @include respond-to('xl') {
+        max-width: rem(534);
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(16);
+    font-size: rem(20);
+
+    @include respond-to('lg') {
+      margin: rem(4) 0 rem(28);
+      font-size: rem(24);
+    }
+
+    @include respond-to('xl') {
+      font-size: rem(40);
+    }
+  }
+
+  &__desc {
+    max-width: 57ch;
+    font-size: rem(14);
+    color: var(--clr-secondary);
+
+    @include respond-to('lg') {
+      font-size: rem(16);
+    }
+  }
+}
