@@ -1,0 +1,35 @@
+@use '../utils' as *;
+
+.notice {
+  width: 100%;
+  padding: rem(240) 0 rem(304);
+  text-align: center;
+  background-image:
+    url('/src/assets/img/bg-section-bottom-mobile-2.svg'),
+    url('/src/assets/img/bg-footer-top-mobile.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% auto, 100% auto;
+  background-position: top, bottom;
+
+  @include respond-to('md') {
+    background-image:
+      url('/src/assets/img/bg-section-bottom-desktop-2.svg'),
+      url('/src/assets/img/bg-footer-top-desktop.svg');
+  }
+
+  @include respond-to('xl') {
+    padding: rem(306) 0 rem(336);
+  }
+
+  &__title {
+    margin-bottom: rem(32);
+    font-size: rem(24);
+
+    @include respond-to('xl') {
+      padding-left: rem(16);
+      margin-bottom: rem(45);
+      font-size: rem(40);
+      letter-spacing: -0.2px;
+    }
+  }
+}
