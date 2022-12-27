@@ -1,0 +1,108 @@
+@use '../utils' as *;
+
+.footer {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: rem(104);
+  width: 100%;
+  padding: rem(62) rem(28);
+  font-size: rem(14);
+  color: var(--clr-ntrl);
+  background-color: var(--clr-secondary);
+
+  @include respond-to('md') {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  @include respond-to('lg') {
+    padding: rem(62) rem(120);
+  }
+
+  @include respond-to('xl') {
+    padding: rem(120) rem(120) rem(102);
+  }
+
+  &__logo {
+    max-width: rem(200);
+    margin-bottom: rem(16);
+
+    @include respond-to('lg') {
+      max-width: rem(240);
+      margin-bottom: rem(28);
+    }
+  }
+
+  &__desc {
+    max-width: 43ch;
+    margin-bottom: rem(24);
+    line-height: 1.72;
+    letter-spacing: 0.25px;
+
+    &--alt {
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__contact {
+    display: grid;
+    grid-template: 1fr 1fr / auto 1fr;
+    align-items: center;
+    gap: rem(18);
+    width: 100%;
+    padding-left: rem(2);
+    margin-bottom: rem(48);
+
+    @include respond-to('lg') {
+      margin-bottom: rem(78);
+    }
+
+    img {
+      justify-self: center;
+    }
+
+    p {
+      font-size: rem(16);
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: rem(24);
+  }
+
+  &__link {
+    display: block;
+    font-size: rem(24);
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--clr-primary);
+    }
+
+    @include respond-to('xl') {
+      font-size: rem(32);
+    }
+
+    i {
+      display: block;
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(23);
+    font-size: rem(20);
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+
+    @include respond-to('lg') {
+      font-size: rem(24);
+    }
+
+    @include respond-to('xl') {
+      margin-top: rem(6);
+    }
+  }
+}
