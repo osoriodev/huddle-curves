@@ -11,13 +11,20 @@
     padding: rem(40);
   }
 
-  @include respond-to('lg') {
+  @include respond-to('xl') {
     padding: rem(80);
   }
 
   &__logo {
-    // 128px -> 240px | 320px -> 960px
-    width: clamp(8rem, 4.5rem + 17.5vw, 15rem);
+    width: rem(140);
+
+    @include respond-to('md') {
+      width: rem(200);
+    }
+
+    @include respond-to('xl') {
+      width: rem(240);
+    }
   }
 
   &__cta {
@@ -27,6 +34,11 @@
     font-size: rem(14);
     line-height: 1;
     color: var(--clr-primary);
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--clr-primary-lt);
+    }
 
     @include respond-to('md') {
       padding: rem(10) rem(30);
