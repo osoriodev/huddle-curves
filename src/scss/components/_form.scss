@@ -1,18 +1,26 @@
 @use '../utils' as *;
 
 .form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: rem(16);
   width: 100%;
   max-width: rem(400);
 
   @include respond-to('lg') {
-    flex-direction: row;
     width: rem(520);
     max-width: none;
-    gap: rem(40);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: rem(16);
+    width: 100%;
+    margin-bottom: rem(8);
+
+    @include respond-to('lg') {
+      flex-direction: row;
+      gap: rem(40);
+    }
   }
 
   &__field {
@@ -24,6 +32,10 @@
 
     &:focus {
       outline: 2px solid var(--clr-primary);
+    }
+
+    &--error {
+      outline: 2px solid var(--clr-warning);
     }
   }
 
@@ -38,6 +50,18 @@
 
     &:hover {
       background-color: var(--clr-primary-lt);
+    }
+  }
+
+  &__error {
+    color: var(--clr-warning);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+
+    &--active {
+      visibility: visible;
+      opacity: 1;
     }
   }
 }

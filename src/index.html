@@ -123,10 +123,14 @@
           We'll never send you spam or pass on your email address
         </p>
         <form class="form" action="#">
-          <input class="form__field" type="email" name="email" id="email">
-          <button class="form__cta" type="submit">Subscribe</button>
+          <div class="form__content">
+            <input class="form__field" type="email" name="email" id="email">
+            <button class="form__cta" type="submit" id="submit">Subscribe</button>
+          </div>
+          <p class="form__error" id="error">Check your email please</p>
         </form>
       </div>
     </footer>
+    <script src="./js/script.js"></script>
   </body>
 </html>
