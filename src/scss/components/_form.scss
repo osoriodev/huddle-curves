@@ -23,6 +23,18 @@
     }
   }
 
+  &__label {
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+  }
+
   &__field {
     width: 100%;
     padding: rem(14);
